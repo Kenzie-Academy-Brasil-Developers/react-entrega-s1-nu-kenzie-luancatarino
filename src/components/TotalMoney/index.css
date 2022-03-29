@@ -1,0 +1,29 @@
+.campValorTotal {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #e9ecef;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0 25px;
+    margin-top: 15px;
+}
+
+#textValorTotal {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+    margin-left: 5px;
+}
+
+h2 {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fd377e;
+    margin-top: 25px;
+}

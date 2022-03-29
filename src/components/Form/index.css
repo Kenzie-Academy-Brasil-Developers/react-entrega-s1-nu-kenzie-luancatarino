@@ -1,0 +1,85 @@
+.form {
+    width: 360px;
+    height: 350px;
+    border: 1px solid #e9ecef;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formContent {
+    padding: 25px;
+    margin-top: 15px;
+}
+
+p {
+    margin-left: 5px;
+    margin-top: 2px;
+    color: #868e96;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.campValue {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+}
+
+.inputForm {
+    margin-top: 10px;
+    width: 314px;
+    height: 50px;
+    color: #868e96;
+    background: #f8f9fa;
+    border: 2px solid #f8f9fa;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0px 16px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+label {
+    margin-left: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+}
+
+#btnSelect {
+    width: 150px;
+}
+
+#btnValor {
+    width: 130px;
+}
+
+#btnInserirValor {
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+    background: #fd377e;
+    border: 2px solid #fd377e;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 314px;
+    height: 48px;
+    padding: 13px 20px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}

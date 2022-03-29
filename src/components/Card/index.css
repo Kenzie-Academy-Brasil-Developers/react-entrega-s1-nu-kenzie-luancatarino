@@ -1,0 +1,62 @@
+.divGeralCard {
+    display: flex;
+}
+
+.campCard {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    width: 100%;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+#descricao {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+    margin-left: 5px;
+}
+
+#tipo {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #868e96;
+}
+
+h3 {
+    margin-top: 30px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: #212529;
+}
+
+#btnExcluir {
+    margin-top: 25px;
+    margin-left: 70px;
+    height: 30px;
+    width: 30px;
+    background: #e9ecef;
+    border: none;
+    border-radius: 2.46154px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+#cor {
+    width: 5px;
+    background-color: #03b898;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.valorBtnExcluir {
+    display: flex;
+}

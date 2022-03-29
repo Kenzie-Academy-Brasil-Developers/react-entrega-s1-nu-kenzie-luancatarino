@@ -1,0 +1,43 @@
+.campList {
+}
+
+.campTextList {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnLista {
+    width: 95px;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 10px;
+    text-align: center;
+    color: #868e96;
+    background: #e9ecef;
+    border: 1.4px solid #e9ecef;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 15px;
+    margin-left: 15px;
+    cursor:pointer;
+}
+
+.btnLista:hover {
+    background-color: #FD377E;
+    border: 1.4px solid #FD377E;
+    color: #fff;
+
+}
+
+#textRes {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #212529;
+}
