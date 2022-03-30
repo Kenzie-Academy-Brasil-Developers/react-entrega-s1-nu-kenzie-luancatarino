@@ -5,12 +5,15 @@ import Form from "./components/Form";
 import List from "./components/List";
 import Card from "./components/Card";
 import TotalMoney from "./components/TotalMoney";
+import LandingPage from "./components/LandingPage";
 
 function App() {
     const [listTransactions, setListTransactions] = useState([
-        { description: "Salário recebido", type: "entrada", value: 2500 },
-        { description: "Conta de luz", type: "saída", value: -150 },
+        { description: "Salário recebido", type: "Entrada", value: 2500 },
+        { description: "Conta de luz", type: "Saída", value: -150 },
     ]);
+    
+   
 
     return (
         <body>
@@ -84,16 +87,19 @@ function App() {
                             </linearGradient>
                         </defs>
                     </svg>
-                    <button id="btnInicio">Início</button>
+                    <button id="btnInicio" onClick={()=> LandingPage()}>Início</button>
                 </section>
             </header>
             <main>
                 <section className="formTotal">
-                    <Form />
-                    <TotalMoney />
+                    <Form listTransactions={listTransactions} setListTransactions={setListTransactions} />
+                    <TotalMoney listTransactions={listTransactions} />
                 </section>
                 <section className="cardsList">
-                    <List />
+                    <List
+                        listTransactions={listTransactions}
+                        setListTransactions={setListTransactions}
+                    />
                 </section>
             </main>
         </body>
