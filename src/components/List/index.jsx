@@ -1,55 +1,69 @@
 import "./index.css";
 import Card from "../Card";
-import {useState} from "react"
+import { useState } from "react";
 
-function List({ listTransactions, setListTransactions }) {
-    const [newFilter, setNewFilter] = useState([])
+function List({ listTransactions, setIsFiltered, isFiltered, setListTransactions }) {
+    const [filteredList, setFilteredList] = useState(listTransactions);
 
-      function filter(typeInput) {
-        const filterTransactions = listTransactions.filter((transaction) => {
-          return transaction.type === typeInput;
-        });
-        setNewFilter(filterTransactions);
-      }
-
+    function filterList(typeInput) {
+        const filterTransactions = listTransactions.filter((transaction) => transaction.type === typeInput);
+        setFilteredList(filterTransactions);
+    }
 
     function removeTransaction(itemRemoved) {
-        const currentTransactions = listTransactions.filter((item) => {
-          return item !== itemRemoved;
+        const currentTransactions = filteredList.filter((item) => {
+            return item !== itemRemoved;
         });
-        setListTransactions(currentTransactions);
-      }
-
-
+        setFilteredList(currentTransactions);
+        
+        const totalTransactions = listTransactions.filter((item) => {
+            return item !== itemRemoved;
+        });
+        setListTransactions(totalTransactions);
+    }
 
     return (
         <section className="campList">
             <div className="campTextList">
                 <h1 id="textRes">Resumo Financeiro</h1>
                 <div>
-                    <button className="btnLista" onClick={()=> filter()}>Todos</button>
-                    <button className="btnLista" onClick={()=> filter("Entrada")}>Entradas</button>
-                    <button className="btnLista" onClick={()=> filter("Saída")}>Despesas</button>
+                    <button
+                        className="btnLista"
+                        onClick={() => {
+                            filterList();
+                            setIsFiltered(false);
+                        }}
+                    >
+                        Todos
+                    </button>
+                    <button
+                        className="btnLista"
+                        onClick={() => {
+                            filterList("Entrada");
+                            setIsFiltered(true);
+                        }}
+                    >
+                        Entradas
+                    </button>
+                    <button
+                        className="btnLista"
+                        onClick={() => {
+                            filterList("Saída");
+                            setIsFiltered(true);
+                        }}
+                    >
+                        Despesas
+                    </button>
                 </div>
             </div>
-            <div>{newFilter.length > 0 ? newFilter.map((transaction,index) => (
-                     <Card
-                    remove={removeTransaction}
-                    transaction={transaction}
-                    key={index}
-                    listTransactions={newFilter}
-                    setListTransactions={setListTransactions}
-                />
-                )) :
-                listTransactions.map((transaction, index) => (
-                    <Card
-                        remove={removeTransaction}
-                        transaction={transaction}
-                        key={index}
-                        listTransactions={listTransactions}
-                        setListTransactions={setListTransactions}
-                    />
-                ))}
+            <div>
+                {isFiltered
+                    ? filteredList.map((transaction, index) => (
+                          <Card key={index} transaction={transaction} removeTransaction={removeTransaction} />
+                      ))
+                    : listTransactions.map((transaction, index) => (
+                          <Card key={index} transaction={transaction} removeTransaction={removeTransaction} />
+                      ))}
             </div>
         </section>
     );

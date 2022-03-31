@@ -18,9 +18,9 @@ function Form({ listTransactions, setListTransactions }) {
 
 
     return (
-        <form className="form" onSubmit={(event) => event.preventDefault()}>
+        <div className="form" >
             <div className="formContent">
-                <label for="descricao">Descrição</label>
+                <label >Descrição</label>
                 <input
                     className="inputForm"
                     type="text"
@@ -31,7 +31,7 @@ function Form({ listTransactions, setListTransactions }) {
                 <p>Ex: Compra de roupas</p>
                 <div className="campValue">
                     <div>
-                        <label for="valor">Valor</label>
+                        <label >Valor</label>
                         <input
                             id="btnValor"
                             className="inputForm"
@@ -43,16 +43,16 @@ function Form({ listTransactions, setListTransactions }) {
                     </div>
 
                     <div>
-                        <label for="select">Tipo de valor</label>
+                        <label >Tipo de valor</label>
                         <select id="btnSelect" className="inputForm" onChange={(event) => setTypeInput(event.target.value)}>
                             <option value="Entrada">Entrada</option>
                             <option value="Saída">Saída</option>
                         </select>
                     </div>
                 </div>
-                <button id="btnInserirValor" onClick={ addTransition}>Inserir Valor</button>
+                <button id="btnInserirValor" onClick={addTransition}>Inserir Valor</button>
             </div>
-        </form>
+        </div>
     );
 }
 
