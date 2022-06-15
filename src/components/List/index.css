@@ -5,6 +5,26 @@
     justify-content: space-between;
 }
 
+.allCards {
+    overflow-y: auto;
+    height: 60vh;
+    padding-right: 10px;
+}
+
+.allCards::-webkit-scrollbar-track {
+    margin-top: 15px;
+}
+
+.allCards::-webkit-scrollbar {
+    width: 5px;
+}
+
+.allCards::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.095);
+    background-color: #d4d2d2;
+    border: none;
+}
 .btnLista {
     width: 95px;
     font-family: "Nunito";
@@ -20,14 +40,13 @@
     border-radius: 8px;
     padding: 15px;
     margin-left: 15px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .btnLista:hover {
-    background-color: #FD377E;
-    border: 1.4px solid #FD377E;
+    background-color: #fd377e;
+    border: 1.4px solid #fd377e;
     color: #fff;
-
 }
 
 #textRes {

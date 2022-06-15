@@ -40,6 +40,10 @@
     line-height: 19px;
 }
 
+#btnLandPage {
+    cursor:pointer;
+}
+
 #mainLandPage {
     width: 70vw;
 }

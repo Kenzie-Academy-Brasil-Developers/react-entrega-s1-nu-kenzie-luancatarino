@@ -2,7 +2,7 @@ import "./index.css";
 import Card from "../Card";
 import { useState } from "react";
 
-function List({ listTransactions, setIsFiltered, isFiltered, setListTransactions }) {
+function List({ listTransactions, setListTransactions, isFiltered, setIsFiltered }) {
     const [filteredList, setFilteredList] = useState(listTransactions);
 
     function filterList(typeInput) {
@@ -15,7 +15,7 @@ function List({ listTransactions, setIsFiltered, isFiltered, setListTransactions
             return item !== itemRemoved;
         });
         setFilteredList(currentTransactions);
-        
+
         const totalTransactions = listTransactions.filter((item) => {
             return item !== itemRemoved;
         });
@@ -56,7 +56,7 @@ function List({ listTransactions, setIsFiltered, isFiltered, setListTransactions
                     </button>
                 </div>
             </div>
-            <div>
+            <div className="allCards">
                 {isFiltered
                     ? filteredList.map((transaction, index) => (
                           <Card key={index} transaction={transaction} removeTransaction={removeTransaction} />
